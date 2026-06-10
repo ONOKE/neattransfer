@@ -2,69 +2,367 @@
 
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neat Transfer | İstanbul Havalimanı Transfer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Neat Transfer | İstanbul Havalimanı VIP Transfer</title>
+<meta name="description" content="İstanbul Havalimanı, Sabiha Gökçen ve şehirlerarası VIP transfer hizmeti. Sedan, VIP Vito ve minibüs seçenekleriyle WhatsApp üzerinden hızlı fiyat alın.">
 
 <style>
-body{
-font-family:Arial,sans-serif;
-margin:0;
-background:#f5f7fb;
-color:#222;
+:root{
+  --dark:#07111f;
+  --gold:#d6a94f;
+  --green:#25D366;
+  --light:#f6f7fb;
+  --text:#172033;
+  --muted:#64748b;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-text-align:center;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:var(--light);
+  line-height:1.6;
 }
 
 .hero{
-padding:60px 20px;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 15% 30%,rgba(214,169,79,.25),transparent 28%),
+    radial-gradient(circle at 85% 30%,rgba(37,211,102,.16),transparent 25%),
+    linear-gradient(135deg,#06101d,#0d1b2f 55%,#020617);
+  color:white;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:70px 70px;
+  opacity:.2;
+}
+
+.container{
+  width:100%;
+  max-width:1180px;
+  margin:auto;
+  padding:36px 22px;
+  position:relative;
+  z-index:2;
+}
+
+.nav{
+  position:absolute;
+  top:24px;
+  left:0;
+  right:0;
+  z-index:5;
+}
+
+.nav-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:0 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:22px;
+}
+
+.nav-phone{
+  color:white;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.25);
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:14px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:42px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  color:#ffe7a4;
+  background:rgba(214,169,79,.12);
+  border:1px solid rgba(214,169,79,.35);
+  padding:8px 14px;
+  border-radius:999px;
+  margin-bottom:18px;
+  font-size:14px;
 }
 
 h1{
-font-size:48px;
-margin-bottom:15px;
+  font-size:58px;
+  line-height:1.05;
+  margin-bottom:20px;
+  letter-spacing:-1px;
 }
 
-.subtitle{
-font-size:22px;
-color:#555;
-margin-bottom:30px;
+.hero p{
+  font-size:21px;
+  color:#d7e0ee;
+  margin-bottom:28px;
+  max-width:650px;
 }
 
-.whatsapp{
-display:inline-block;
-background:#25D366;
-color:white;
-padding:18px 35px;
-border-radius:10px;
-text-decoration:none;
-font-size:22px;
-font-weight:bold;
+.cta-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  font-weight:800;
+  border-radius:14px;
+  padding:17px 26px;
+  font-size:18px;
+}
+
+.btn-whatsapp{
+  background:var(--green);
+  color:white;
+  box-shadow:0 14px 30px rgba(37,211,102,.25);
+}
+
+.btn-secondary{
+  color:white;
+  border:1px solid rgba(255,255,255,.25);
+}
+
+.trust{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:28px;
+  color:#cbd5e1;
+  font-size:15px;
+}
+
+.vehicle-stage{
+  position:relative;
+  min-height:420px;
+}
+
+.car-card{
+  position:absolute;
+  width:300px;
+  border-radius:26px;
+  padding:28px;
+  background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+  backdrop-filter:blur(12px);
+}
+
+.car-card.left{
+  left:0;
+  top:40px;
+  transform:rotate(-5deg);
+}
+
+.car-card.right{
+  right:0;
+  bottom:28px;
+  transform:rotate(5deg);
+}
+
+.car-icon{
+  font-size:76px;
+  margin-bottom:18px;
+}
+
+.car-title{
+  font-size:24px;
+  font-weight:900;
+  color:white;
+}
+
+.car-text{
+  color:#cbd5e1;
+  margin-top:8px;
+}
+
+.gold-line{
+  width:70px;
+  height:4px;
+  background:var(--gold);
+  border-radius:10px;
+  margin-top:18px;
+}
+
+section{
+  padding:70px 22px;
+}
+
+.section-inner{
+  max-width:1180px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:12px;
+  color:#0f172a;
+}
+
+.section-sub{
+  text-align:center;
+  color:var(--muted);
+  max-width:720px;
+  margin:0 auto 38px;
+  font-size:18px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
 .card{
-background:white;
-padding:25px;
-margin-top:40px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+  background:white;
+  padding:28px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(15,23,42,.08);
+  border:1px solid #e5e7eb;
 }
 
-.features{
-line-height:2;
-font-size:18px;
+.card h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+.steps{
+  background:#0f172a;
+  color:white;
+}
+
+.steps .section-title{color:white}
+.steps .section-sub{color:#cbd5e1}
+
+.step-num{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--gold);
+  color:#111827;
+  font-weight:900;
+  margin-bottom:16px;
+}
+
+.routes{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.route{
+  background:white;
+  border-radius:16px;
+  padding:18px 20px;
+  box-shadow:0 8px 24px rgba(15,23,42,.06);
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.route span{
+  color:var(--muted);
+}
+
+.cta-section{
+  background:linear-gradient(135deg,#07111f,#12223a);
+  color:white;
+  text-align:center;
+}
+
+.cta-section h2{
+  font-size:40px;
+  margin-bottom:14px;
+}
+
+.cta-section p{
+  color:#cbd5e1;
+  font-size:19px;
+  margin-bottom:24px;
 }
 
 .footer{
-margin-top:50px;
-padding:20px;
-color:#777;
-font-size:14px;
+  background:#020617;
+  color:#94a3b8;
+  padding:30px 22px;
+  text-align:center;
+  font-size:14px;
+}
+
+.floating-wa{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:var(--green);
+  color:white;
+  text-decoration:none;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  box-shadow:0 12px 30px rgba(0,0,0,.28);
+  z-index:20;
+}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  h1{font-size:42px}
+  .hero{min-height:auto;padding-top:80px}
+  .vehicle-stage{min-height:330px}
+  .car-card{width:240px}
+  .cards{grid-template-columns:1fr}
+  .routes{grid-template-columns:1fr}
+}
+
+@media(max-width:560px){
+  h1{font-size:34px}
+  .hero p{font-size:18px}
+  .btn{width:100%;text-align:center}
+  .nav-phone{display:none}
+  .car-card{
+    position:relative;
+    width:100%;
+    transform:none!important;
+    margin-bottom:16px;
+  }
+  .vehicle-stage{min-height:auto}
 }
 </style>
 
@@ -72,58 +370,141 @@ font-size:14px;
 
 <body>
 
-<div class="container">
-
-<div class="hero">
-
-<h1>NEAT TRANSFER</h1>
-
-<div class="subtitle">
-İstanbul Havalimanı, Sabiha Gökçen ve Şehirlerarası VIP Transfer Hizmeti
+<div class="nav">
+  <div class="nav-inner">
+    <div class="logo">NEAT TRANSFER</div>
+    <a class="nav-phone" href="https://wa.me/905376986489" target="_blank">WhatsApp ile İletişim</a>
+  </div>
 </div>
 
-<a class="whatsapp"
-href="https://wa.me/905376986489?text=Merhaba,%20transfer%20için%20fiyat%20almak%20istiyorum."
-target="_blank">
-WhatsApp'tan Fiyat Al </a>
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="badge">İstanbul Havalimanı • Sabiha Gökçen • Şehirlerarası Transfer</div>
+        <h1>Konforlu, güvenli ve zamanında VIP transfer.</h1>
+        <p>İstanbul Havalimanı, Sabiha Gökçen ve şehirlerarası transferleriniz için Sedan, VIP Vito ve Minibüs seçenekleriyle hızlı fiyat teklifi alın.</p>
 
+```
+    <div class="cta-row">
+      <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Merhaba,%20transfer%20için%20fiyat%20almak%20istiyorum." target="_blank">WhatsApp'tan Fiyat Al</a>
+      <a class="btn btn-secondary" href="#services">Hizmetleri İncele</a>
+    </div>
+
+    <div class="trust">
+      <div>✓ 7/24 destek</div>
+      <div>✓ Profesyonel sürücüler</div>
+      <div>✓ Temiz ve konforlu araçlar</div>
+      <div>✓ Hızlı rezervasyon</div>
+    </div>
+  </div>
+
+  <div class="vehicle-stage">
+    <div class="car-card left">
+      <div class="car-icon">🚘</div>
+      <div class="car-title">Sedan Transfer</div>
+      <div class="car-text">Şehir içi ve havalimanı transferleri için ekonomik ve konforlu seçenek.</div>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="car-card right">
+      <div class="car-icon">🚐</div>
+      <div class="car-title">VIP Vito</div>
+      <div class="car-text">Aile, iş seyahati ve özel karşılama talepleri için premium transfer.</div>
+      <div class="gold-line"></div>
+    </div>
+  </div>
 </div>
+```
 
-<div class="card">
+  </div>
+</header>
 
-<h2>Neden Neat Transfer?</h2>
+<section id="services">
+  <div class="section-inner">
+    <h2 class="section-title">Transfer Hizmetleri</h2>
+    <p class="section-sub">İhtiyacınıza göre doğru araç ve güzergah planlamasıyla hızlı fiyat teklifi sunuyoruz.</p>
 
-<div class="features">
-✓ 7/24 Transfer Hizmeti<br>
-✓ İstanbul Havalimanı Transferleri<br>
-✓ Sabiha Gökçen Transferleri<br>
-✓ Şehirlerarası Transferler<br>
-✓ Sedan Araçlar<br>
-✓ VIP Vito<br>
-✓ Minibüs Hizmeti<br>
-✓ Güvenli ve Konforlu Yolculuk
+```
+<div class="cards">
+  <div class="card">
+    <h3>Havalimanı Transfer</h3>
+    <p>İstanbul Havalimanı ve Sabiha Gökçen için zamanında karşılama ve güvenli ulaşım.</p>
+  </div>
+  <div class="card">
+    <h3>VIP Transfer</h3>
+    <p>VIP Vito araçlarla konforlu, özel ve prestijli ulaşım deneyimi.</p>
+  </div>
+  <div class="card">
+    <h3>Şehirlerarası Transfer</h3>
+    <p>İstanbul çıkışlı veya İstanbul varışlı şehirlerarası transfer talepleriniz için teklif alın.</p>
+  </div>
 </div>
+```
 
+  </div>
+</section>
+
+<section class="steps">
+  <div class="section-inner">
+    <h2 class="section-title">Nasıl Çalışır?</h2>
+    <p class="section-sub">WhatsApp üzerinden birkaç bilgi paylaşın, ekibimiz hızlıca fiyat teklifinizi hazırlasın.</p>
+
+```
+<div class="cards">
+  <div class="card">
+    <div class="step-num">1</div>
+    <h3>WhatsApp'tan Yazın</h3>
+    <p>Alış ve varış noktanızı paylaşın.</p>
+  </div>
+  <div class="card">
+    <div class="step-num">2</div>
+    <h3>Bilgileri Tamamlayın</h3>
+    <p>Tarih, saat, yolcu sayısı ve araç tercihinizi iletin.</p>
+  </div>
+  <div class="card">
+    <div class="step-num">3</div>
+    <h3>Teklifinizi Alın</h3>
+    <p>Ekibimiz fiyat teklifinizi kısa süre içinde sizinle paylaşır.</p>
+  </div>
 </div>
+```
 
-<div class="card">
+  </div>
+</section>
 
-<h2>Nasıl Çalışır?</h2>
+<section>
+  <div class="section-inner">
+    <h2 class="section-title">Popüler Güzergahlar</h2>
+    <p class="section-sub">Sık talep edilen transfer noktaları.</p>
 
-<div class="features">
-1️⃣ WhatsApp'tan bize yazın<br>
-2️⃣ Transfer bilgilerinizi paylaşın<br>
-3️⃣ Fiyat teklifinizi alın<br>
-4️⃣ Rezervasyonunuzu onaylayın
+```
+<div class="routes">
+  <div class="route"><strong>İstanbul Havalimanı</strong><span>→ Kadıköy</span></div>
+  <div class="route"><strong>Sabiha Gökçen</strong><span>→ İstanbul Havalimanı</span></div>
+  <div class="route"><strong>İstanbul Havalimanı</strong><span>→ Taksim</span></div>
+  <div class="route"><strong>Sabiha Gökçen</strong><span>→ Bursa</span></div>
+  <div class="route"><strong>İstanbul</strong><span>→ Bolu / Ankara</span></div>
+  <div class="route"><strong>İstanbul</strong><span>→ Sapanca / Kocaeli</span></div>
 </div>
+```
 
-</div>
+  </div>
+</section>
 
-<div class="footer">
-© 2026 Neat Transfer
-</div>
+<section class="cta-section">
+  <div class="section-inner">
+    <h2>Transfer fiyatı almak ister misiniz?</h2>
+    <p>WhatsApp üzerinden yazın, ekibimiz transfer talebinizi hızlıca değerlendirsin.</p>
+    <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Merhaba,%20transfer%20için%20fiyat%20almak%20istiyorum." target="_blank">Hemen WhatsApp'tan Yaz</a>
+  </div>
+</section>
 
-</div>
+<footer class="footer">
+  © 2026 Neat Transfer. Tüm hakları saklıdır.
+</footer>
+
+<a class="floating-wa" href="https://wa.me/905376986489?text=Merhaba,%20transfer%20için%20fiyat%20almak%20istiyorum." target="_blank">☏</a>
 
 </body>
 </html>
