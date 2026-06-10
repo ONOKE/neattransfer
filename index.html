@@ -1,104 +1,129 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neat Transfer | Premium VIP Transfer</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #121212; color: #e0e0e0; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
-        .container { background: #1e1e1e; width: 100%; max-width: 450px; padding: 30px; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border: 1px solid #2d2d2d; }
-        .logo { text-align: center; font-size: 28px; font-weight: bold; color: #fff; margin-bottom: 5px; letter-spacing: 1px; }
-        .logo span { color: #d4af37; }
-        .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 30px; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: 500; }
-        input, select { width: 100%; padding: 12px 16px; background: #2a2a2a; border: 1px solid #3d3d3d; border-radius: 8px; color: #fff; font-size: 15px; transition: all 0.3s; }
-        input:focus, select:focus { border-color: #d4af37; outline: none; background: #333; }
-        .datetime-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .btn { display: block; width: 100%; background: #25d366; color: #fff; border: none; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; text-align: center; text-decoration: none; margin-top: 10px; transition: background 0.3s; }
-        .btn:hover { background: #20ba5a; }
-        .footer-text { text-align: center; font-size: 11px; color: #555; margin-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neat Transfer | İstanbul Havalimanı Transfer</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f5f7fb;
+color:#222;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+text-align:center;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.subtitle{
+font-size:22px;
+color:#555;
+margin-bottom:30px;
+}
+
+.whatsapp{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:18px 35px;
+border-radius:10px;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
+}
+
+.card{
+background:white;
+padding:25px;
+margin-top:40px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.features{
+line-height:2;
+font-size:18px;
+}
+
+.footer{
+margin-top:50px;
+padding:20px;
+color:#777;
+font-size:14px;
+}
+</style>
+
 </head>
+
 <body>
 
 <div class="container">
-    <div class="logo">NEAT <span>TRANSFER</span></div>
-    <div class="subtitle">Konforlu ve Güvenilir VIP Yolculuk</div>
-    
-    <form id="transferForm">
-        <div class="form-group">
-            <label for="pickup">Nereden? (Alış Lokasyonu)</label>
-            <input type="text" id="pickup" placeholder="Örn: İstanbul Havalimanı veya Otel Adı" required>
-        </div>
 
-        <div class="form-group">
-            <label for="dropoff">Nereye? (Varış Lokasyonu)</label>
-            <input type="text" id="dropoff" placeholder="Örn: Kadıköy veya Adresiniz" required>
-        </div>
+<div class="hero">
 
-        <div class="datetime-grid">
-            <div class="form-group">
-                <label for="date">Transfer Tarihi</label>
-                <input type="date" id="date" required>
-            </div>
-            <div class="form-group">
-                <label for="time">Transfer Saati</label>
-                <input type="time" id="time" required>
-            </div>
-        </div>
+<h1>NEAT TRANSFER</h1>
 
-        <div class="form-group">
-            <label for="passenger">Yolcu Sayısı</label>
-            <select id="passenger">
-                <option value="1">1 Kişi</option>
-                <option value="2">2 Kişi</option>
-                <option value="3">3 Kişi</option>
-                <option value="4">4 Kişi</option>
-                <option value="5+">5+ Kişi</option>
-            </select>
-        </div>
-
-        <button type="button" class="btn" onclick="sendToWhatsApp()">WhatsApp ile Fiyat Al</button>
-    </form>
-    
-    <div class="footer-text">Butona bastığınızda WhatsApp hattımıza yönlendirileceksiniz.</div>
+<div class="subtitle">
+İstanbul Havalimanı, Sabiha Gökçen ve Şehirlerarası VIP Transfer Hizmeti
 </div>
 
-<script>
-    // Tarih seçiciye bugünün minimum tarihini otomatik atama
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('date').min = today;
+<a class="whatsapp"
+href="https://wa.me/905376986489?text=Merhaba,%20transfer%20için%20fiyat%20almak%20istiyorum."
+target="_blank">
+WhatsApp'tan Fiyat Al </a>
 
-    function sendToWhatsApp() {
-        const pickup = document.getElementById('pickup').value.trim();
-        const dropoff = document.getElementById('dropoff').value.trim();
-        const rawDate = document.getElementById('date').value;
-        const time = document.getElementById('time').value;
-        const passenger = document.getElementById('passenger').value;
+</div>
 
-        if(!pickup || !dropoff || !rawDate || !time) {
-            alert("Lütfen tüm alanları doldurun.");
-            return;
-        }
+<div class="card">
 
-        // Tarihi dd.mm.yyyy formatına çeviriyoruz (n8n regex tam okusun diye)
-        const dateParts = rawDate.split('-');
-        const formattedDate = `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
+<h2>Neden Neat Transfer?</h2>
 
-        // Senin telefon numaran (Kendi WhatsApp işletme numaranla değiştirebilirsin)
-        const phoneNumber = "905376986489"; 
+<div class="features">
+✓ 7/24 Transfer Hizmeti<br>
+✓ İstanbul Havalimanı Transferleri<br>
+✓ Sabiha Gökçen Transferleri<br>
+✓ Şehirlerarası Transferler<br>
+✓ Sedan Araçlar<br>
+✓ VIP Vito<br>
+✓ Minibüs Hizmeti<br>
+✓ Güvenli ve Konforlu Yolculuk
+</div>
 
-        // Senin n8n'deki JavaScript1 kodunun hatasız ayıklayacağı o kusursuz metin yapısı
-        const message = `Merhaba, web sitenizden yazıyorum. ${pickup}'den ${dropoff}'ye transfer fiyatı almak istiyorum. Tarih: ${formattedDate} Saat: ${time} kişi sayısı: ${passenger}`;
+</div>
 
-        // WhatsApp Web / Mobile yönlendirme linki
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        
-        window.open(whatsappUrl, '_blank');
-    }
-</script>
+<div class="card">
+
+<h2>Nasıl Çalışır?</h2>
+
+<div class="features">
+1️⃣ WhatsApp'tan bize yazın<br>
+2️⃣ Transfer bilgilerinizi paylaşın<br>
+3️⃣ Fiyat teklifinizi alın<br>
+4️⃣ Rezervasyonunuzu onaylayın
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Neat Transfer
+</div>
+
+</div>
 
 </body>
 </html>
