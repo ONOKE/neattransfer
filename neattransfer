@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neat Transfer</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f7fa;
+color:#222;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:60px 20px;
+text-align:center;
+}
+
+h1{
+font-size:48px;
+margin-bottom:15px;
+color:#0f172a;
+}
+
+.subtitle{
+font-size:22px;
+margin-bottom:40px;
+color:#475569;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
+margin-bottom:30px;
+}
+
+.features{
+font-size:20px;
+line-height:2;
+}
+
+.whatsapp-btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:18px 35px;
+border-radius:12px;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.whatsapp-btn:hover{
+opacity:0.9;
+}
+
+.footer{
+margin-top:50px;
+font-size:14px;
+color:#64748b;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>NEAT TRANSFER</h1>
+
+<div class="subtitle">
+İstanbul Havalimanı ve Şehirlerarası Transfer Hizmeti
+</div>
+
+<div class="card">
+
+<div class="features">
+✅ İstanbul Havalimanı Transferleri<br>
+✅ Sabiha Gökçen Transferleri<br>
+✅ Şehirlerarası Transferler<br>
+✅ Sedan Araçlar<br>
+✅ VIP Vito<br>
+✅ Minibüs Hizmeti<br>
+✅ 7/24 Destek
+</div>
+
+<a class="whatsapp-btn"
+href="https://wa.me/905376986489?text=Merhaba,%20transfer%20için%20fiyat%20almak%20istiyorum."
+target="_blank">
+WhatsApp'tan Fiyat Al </a>
+
+</div>
+
+<div class="footer">
+© 2026 Neat Transfer
+</div>
+
+</div>
+
+</body>
+</html>
