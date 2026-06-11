@@ -1,11 +1,11 @@
+:::writing{variant="document" id="48291"}
 <!DOCTYPE html>
-
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Neat Transfer | İstanbul Havalimanı VIP Transfer</title>
-<meta name="description" content="İstanbul Havalimanı, Sabiha Gökçen ve şehirlerarası VIP transfer hizmeti. Sedan, VIP Vito ve minibüs seçenekleriyle WhatsApp üzerinden hızlı fiyat alın.">
+<title>Neat Transfer | Istanbul Airport VIP Transfer</title>
+<meta name="description" content="Premium airport and private transfer service in Istanbul. Executive Sedan, VIP Vito and Minibus options. Get a fast quote on WhatsApp.">
 
 <style>
 :root{
@@ -17,7 +17,8 @@
   --muted:#64748b;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}car
+*{box-sizing:border-box;margin:0;padding:0}
+
 body{
   font-family:Arial,Helvetica,sans-serif;
   color:var(--text);
@@ -27,11 +28,16 @@ body{
 
 .hero{
   min-height:100vh;
-background:
-linear-gradient(rgba(7,17,31,.78),rgba(7,17,31,.86)),
-url("https://images.pexels.com/photos/19315507/pexels-photo-19315507.jpeg?auto=compress&cs=tinysrgb&w=1600");
-background-size:cover;
-background-position:center;
+  background:
+    linear-gradient(rgba(7,17,31,.78),rgba(7,17,31,.86)),
+    url("https://images.pexels.com/photos/19315507/pexels-photo-19315507.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  color:white;
 }
 
 .hero:before{
@@ -75,6 +81,7 @@ background-position:center;
   font-weight:900;
   letter-spacing:2px;
   font-size:22px;
+  color:white;
 }
 
 .nav-phone{
@@ -163,7 +170,7 @@ h1{
   position:absolute;
   width:300px;
   border-radius:26px;
-  padding:28px;
+  padding:20px;
   overflow:hidden;
   background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
   border:1px solid rgba(255,255,255,.18);
@@ -183,9 +190,12 @@ h1{
   transform:rotate(5deg);
 }
 
-.car-icon{
-  font-size:76px;
-  margin-bottom:18px;
+.car-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:15px;
 }
 
 .car-title{
@@ -341,7 +351,7 @@ section{
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr}
   h1{font-size:42px}
-  .hero{min-height:auto;padding-top:80px}
+  .hero{min-height:auto;padding-top:100px}
   .vehicle-stage{min-height:330px}
   .car-card{width:240px}
   .cards{grid-template-columns:1fr}
@@ -362,7 +372,6 @@ section{
   .vehicle-stage{min-height:auto}
 }
 </style>
-
 </head>
 
 <body>
@@ -370,7 +379,7 @@ section{
 <div class="nav">
   <div class="nav-inner">
     <div class="logo">NEAT TRANSFER</div>
-    <a class="nav-phone" href="https://wa.me/905376986489" target="_blank">WhatsApp ile İletişim</a>
+    <a class="nav-phone" href="https://wa.me/905376986489" target="_blank">Contact on WhatsApp</a>
   </div>
 </div>
 
@@ -382,155 +391,120 @@ section{
         <h1>Premium Airport & Private Transfer Service in Istanbul</h1>
         <p>Reliable airport and private transfer services with Executive Sedan, VIP Vito and Minibus options available 24/7.</p>
 
-```
-    <div class="cta-row">
-      <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">Get a Quote on WhatsApp</a>
-      <a class="btn btn-secondary" href="#services">Hizmetleri İncele</a>
+        <div class="cta-row">
+          <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">Get a Quote on WhatsApp</a>
+          <a class="btn btn-secondary" href="#services">Explore Services</a>
+        </div>
+
+        <div class="trust">
+          <div>✓ 24/7 support</div>
+          <div>✓ Professional drivers</div>
+          <div>✓ Clean and comfortable vehicles</div>
+          <div>✓ Fast booking assistance</div>
+        </div>
+      </div>
+
+      <div class="vehicle-stage">
+        <div class="car-card left">
+          <img src="https://images.pexels.com/photos/17233277/pexels-photo-17233277.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Executive Sedan transfer vehicle">
+          <div class="car-title">Executive Sedan</div>
+          <div class="car-text">Comfortable and stylish transportation for airport, hotel and business travel.</div>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="car-card right">
+          <img src="https://images.pexels.com/photos/17455625/pexels-photo-17455625.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="VIP Vito transfer vehicle">
+          <div class="car-title">VIP Vito</div>
+          <div class="car-text">Premium transfer option for families, business travelers and private airport pickups.</div>
+          <div class="gold-line"></div>
+        </div>
+      </div>
     </div>
-        
-    <div class="trust">
-      <div>✓ 7/24 destek</div>
-      <div>✓ Profesyonel sürücüler</div>
-      <div>✓ Temiz ve konforlu araçlar</div>
-      <div>✓ Hızlı rezervasyon</div>
-    </div>
-  </div>
-
-  <div class="vehicle-stage">
-  <div class="car-card left">
-
-<img
-src="https://images.pexels.com/photos/17233277/pexels-photo-17233277.jpeg?auto=compress&cs=tinysrgb&w=1200"
-style="
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:14px;
-margin-bottom:15px;
-">
-
-<div class="car-title">Executive Sedan</div>
-
-<div class="car-text">
-Comfortable and stylish transportation for airport, hotel and business travel.
-</div>
-
-<div class="gold-line"></div>
-
-</div>
-  <div class="car-card right">
-
-<img
-src="https://images.pexels.com/photos/17455625/pexels-photo-17455625.jpeg?auto=compress&cs=tinysrgb&w=1200"
-style="
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:14px;
-margin-bottom:15px;
-">
-
-<div class="car-title">VIP Vito</div>
-
-<div class="car-text">
-Aile, iş seyahati ve özel karşılama talepleri için premium transfer hizmeti.
-</div>
-
-<div class="gold-line"></div>
-
-</div>
-  </div>
-</div>
-```
-
   </div>
 </header>
 
 <section id="services">
   <div class="section-inner">
-    <h2 class="section-title">Transfer Hizmetleri</h2>
-    <p class="section-sub">İhtiyacınıza göre doğru araç ve güzergah planlamasıyla hızlı fiyat teklifi sunuyoruz.</p>
+    <h2 class="section-title">Transfer Services</h2>
+    <p class="section-sub">Choose the right vehicle for your route and receive a fast quote on WhatsApp.</p>
 
-```
-<div class="cards">
-  <div class="card">
-    <h3>Havalimanı Transfer</h3>
-    <p>İstanbul Havalimanı ve Sabiha Gökçen için zamanında karşılama ve güvenli ulaşım.</p>
-  </div>
-  <div class="card">
-    <h3>VIP Transfer</h3>
-    <p>VIP Vito araçlarla konforlu, özel ve prestijli ulaşım deneyimi.</p>
-  </div>
-  <div class="card">
-    <h3>Şehirlerarası Transfer</h3>
-    <p>İstanbul çıkışlı veya İstanbul varışlı şehirlerarası transfer talepleriniz için teklif alın.</p>
-  </div>
-</div>
-```
-
+    <div class="cards">
+      <div class="card">
+        <h3>Airport Transfer</h3>
+        <p>Reliable pickup and drop-off service for Istanbul Airport and Sabiha Gokcen Airport.</p>
+      </div>
+      <div class="card">
+        <h3>VIP Transfer</h3>
+        <p>Comfortable VIP Vito vehicles for premium, private and business travel needs.</p>
+      </div>
+      <div class="card">
+        <h3>Intercity Transfer</h3>
+        <p>Private transfer options from Istanbul to nearby cities and popular destinations.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="steps">
   <div class="section-inner">
-    <h2 class="section-title">Nasıl Çalışır?</h2>
-    <p class="section-sub">WhatsApp üzerinden birkaç bilgi paylaşın, ekibimiz hızlıca fiyat teklifinizi hazırlasın.</p>
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-sub">Send us your transfer details on WhatsApp and our team will prepare your quote quickly.</p>
 
-```
-<div class="cards">
-  <div class="card">
-    <div class="step-num">1</div>
-    <h3>WhatsApp'tan Yazın</h3>
-    <p>Alış ve varış noktanızı paylaşın.</p>
-  </div>
-  <div class="card">
-    <div class="step-num">2</div>
-    <h3>Bilgileri Tamamlayın</h3>
-    <p>Tarih, saat, yolcu sayısı ve araç tercihinizi iletin.</p>
-  </div>
-  <div class="card">
-    <div class="step-num">3</div>
-    <h3>Teklifinizi Alın</h3>
-    <p>Ekibimiz fiyat teklifinizi kısa süre içinde sizinle paylaşır.</p>
-  </div>
-</div>
-```
-
+    <div class="cards">
+      <div class="card">
+        <div class="step-num">1</div>
+        <h3>Send a WhatsApp Message</h3>
+        <p>Share your pickup and drop-off locations.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">2</div>
+        <h3>Complete Trip Details</h3>
+        <p>Send your date, time, passenger count and preferred vehicle.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">3</div>
+        <h3>Receive Your Quote</h3>
+        <p>Our team will contact you shortly with the best available offer.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="section-inner">
-    <h2 class="section-title">Popüler Güzergahlar</h2>
-    <p class="section-sub">Sık talep edilen transfer noktaları.</p>
+    <h2 class="section-title">Popular Routes</h2>
+    <p class="section-sub">Frequently requested airport and private transfer routes.</p>
 
-```
-<div class="routes">
-  <div class="route"><strong>İstanbul Havalimanı</strong><span>→ Kadıköy</span></div>
-  <div class="route"><strong>Sabiha Gökçen</strong><span>→ İstanbul Havalimanı</span></div>
-  <div class="route"><strong>İstanbul Havalimanı</strong><span>→ Taksim</span></div>
-  <div class="route"><strong>Sabiha Gökçen</strong><span>→ Bursa</span></div>
-  <div class="route"><strong>İstanbul</strong><span>→ Bolu / Ankara</span></div>
-  <div class="route"><strong>İstanbul</strong><span>→ Sapanca / Kocaeli</span></div>
-</div>
-```
-
+    <div class="routes">
+      <div class="route"><strong>Istanbul Airport</strong><span>→ Kadikoy</span></div>
+      <div class="route"><strong>Sabiha Gokcen Airport</strong><span>→ Istanbul Airport</span></div>
+      <div class="route"><strong>Istanbul Airport</strong><span>→ Taksim</span></div>
+      <div class="route"><strong>Sabiha Gokcen Airport</strong><span>→ Bursa</span></div>
+      <div class="route"><strong>Istanbul</strong><span>→ Bolu / Ankara</span></div>
+      <div class="route"><strong>Istanbul</strong><span>→ Sapanca / Kocaeli</span></div>
+    </div>
   </div>
 </section>
 
 <section class="cta-section">
   <div class="section-inner">
-    <h2>Transfer fiyatı almak ister misiniz?</h2>
-    <p>WhatsApp üzerinden yazın, ekibimiz transfer talebinizi hızlıca değerlendirsin.</p>
-    <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Merhaba,%20transfer%20için%20fiyat%20almak%20istiyorum." target="_blank">Hemen WhatsApp'tan Yaz</a>
+    <h2>Need a private transfer quote?</h2>
+    <p>Message us on WhatsApp and our team will assist you with your transfer request.</p>
+    <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">Message Us on WhatsApp</a>
   </div>
 </section>
 
 <footer class="footer">
-  © 2026 Neat Transfer. Tüm hakları saklıdır.
+  © 2026 Neat Transfer. All rights reserved.
 </footer>
 
-<a class="floating-wa" href="https://wa.me/905376986489?text=Merhaba,%20transfer%20için%20fiyat%20almak%20istiyorum." target="_blank">☏</a>
+<a class="floating-wa" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">☏</a>
 
 </body>
 </html>
+:::
+
+Bunu komple yapıştırınca Türkçe kalmaz. Commit sonrası sayfayı şu şekilde aç:
+
+```text
+https://neattransfer.com/?v=en1
