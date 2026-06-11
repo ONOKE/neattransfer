@@ -49,7 +49,7 @@ body {
 }
 
 .nav-inner {
-  max-width: 1320px; /* Geniş ekranlar için maksimum ferahlık */
+  max-width: 1320px;
   margin: auto;
   padding: 0 22px;
   display: flex;
@@ -84,18 +84,18 @@ body {
   color: var(--dark);
 }
 
-/* Hero Alanı */
+/* Hero Alanı - Dikey Hizalama Optimize */
 .hero {
   min-height: 100vh;
-  padding-top: 150px;
-  padding-bottom: 100px;
+  padding-top: 130px;
+  padding-bottom: 80px;
   background: linear-gradient(rgba(11, 19, 32, 0.85), rgba(15, 23, 42, 0.96)),
               url("https://images.pexels.com/photos/19315507/pexels-photo-19315507.jpeg?auto=compress&cs=tinysrgb&w=1600");
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Sol tarafın aşağı kaymasını engelleyen kilit hizalama */
 }
 
 .hero:before {
@@ -111,23 +111,23 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1320px; /* Genişletilmiş ana konteyner */
+  max-width: 1320px;
   margin: auto;
   padding: 0 22px;
   position: relative;
   z-index: 2;
 }
 
-/* MAKSİMUM GENİŞLİĞE ULAŞTIRILMIŞ HERO GRID YAPISI */
+/* Dengelenmiş Grid Oranları */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1.3fr; /* Sol taraf daraltıldı, sağdaki dev sahneye maksimum alan ayrıldı */
-  gap: 60px;
-  align-items: center;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 50px;
+  align-items: flex-start;
 }
 
 .hero-content {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .badge {
@@ -144,65 +144,36 @@ body {
 }
 
 h1 {
-  font-size: 46px;
+  font-size: 44px;
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: #ffffff;
   letter-spacing: -1px;
 }
 
 .hero p.subtitle {
-  font-size: 17px;
+  font-size: 16.5px;
   color: #cbd5e1;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   font-weight: 300;
 }
 
 .cta-row {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 12px;
-  padding: 14px 28px;
-  font-size: 16px;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-whatsapp {
-  background: var(--green);
-  color: white;
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-}
-
-.btn-secondary {
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-}
-
-/* 2 Sütunlu Güven Maddeleri */
+/* Sıkılaştırılmış 14 Maddelik Güven Alanı */
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px 20px;
+  gap: 8px 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
+  padding-top: 16px;
 }
 
 .trust-item {
@@ -210,8 +181,9 @@ h1 {
   align-items: flex-start;
   gap: 6px;
   color: #cbd5e1;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 300;
+  line-height: 1.3;
 }
 
 .trust-item span {
@@ -219,48 +191,48 @@ h1 {
   font-weight: 700;
 }
 
-/* MAKSİMUM YAYILIM ALANINA SAHİP SAĞ SAHNE */
+/* Sağ Büyük Kart Sahnesi */
 .vehicle-stage-spread {
   position: relative;
-  height: 560px;
+  height: 540px;
   width: 100%;
 }
 
-/* Devasa Premium Kartlar */
+/* Devasa ve Yüksek Kontrastlı Araç Kartları */
 .car-card {
   position: absolute;
-  width: 340px; 
-  height: 450px; 
-  background: rgba(15, 23, 42, 0.65); 
+  width: 330px; 
+  height: 440px; 
+  background: rgba(15, 23, 42, 0.7); 
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 26px;
-  padding: 24px;
+  padding: 22px;
   box-shadow: -20px 30px 60px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), z-index 0.3s, border-color 0.3s, background 0.3s;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), z-index 0.3s, border-color 0.3s;
 }
 
-/* Genişleyen Grid Alanına Göre Kusursuz Yelpaze Düzeni */
+/* İskambil Yelpaze Dağılımı */
 .car-card.c1 {
-  left: 0px; /* Tam sol sınırdan başlar */
-  top: 75px;
+  left: 0px;
+  top: 60px;
   z-index: 1;
   transform: rotate(-10deg);
 }
 
 .car-card.c2 {
-  left: 170px; /* Geniş boşluklarla dağıtıldı */
-  top: 35px;
+  left: 150px;
+  top: 30px;
   z-index: 2;
   transform: rotate(-3deg);
 }
 
 .car-card.c3 {
-  left: 340px; /* Birbirlerini kapatmayacak şekilde sağa açıldı */
-  top: 15px;
+  left: 300px;
+  top: 10px;
   z-index: 3;
   transform: rotate(6deg);
 }
@@ -268,15 +240,15 @@ h1 {
 /* Hover Efektleri */
 .car-card:hover {
   z-index: 10;
-  transform: scale(1.05) translateY(-20px) rotate(0deg);
+  transform: scale(1.05) translateY(-15px) rotate(0deg);
   border-color: var(--gold);
-  background: rgba(20, 30, 54, 0.9);
+  background: rgba(20, 30, 54, 0.95);
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
 }
 
 .car-image-wrapper {
   width: 100%;
-  height: 185px; 
+  height: 175px; 
   border-radius: 16px;
   overflow: hidden;
 }
@@ -288,29 +260,29 @@ h1 {
 }
 
 .car-title {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
   color: white;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .car-text {
   color: #e2e8f0; 
-  font-size: 14.5px;
-  margin-top: 10px;
+  font-size: 14px;
+  margin-top: 8px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .gold-line {
-  width: 55px;
-  height: 3.5px;
+  width: 50px;
+  height: 3px;
   background: var(--gold);
   border-radius: 10px;
   margin-top: auto; 
 }
 
-/* Diğer Alt Bölümler */
+/* Diğer Bölümler */
 section {
   padding: 80px 22px;
 }
@@ -326,7 +298,6 @@ section {
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--dark);
-  letter-spacing: -0.5px;
 }
 
 .section-sub {
@@ -349,11 +320,6 @@ section {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(15,23,42,0.03);
   border: 1px solid #e2e8f0;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
 }
 
 .card h3 {
@@ -366,7 +332,6 @@ section {
 .card p {
   color: var(--muted);
   font-size: 14.5px;
-  font-weight: 300;
 }
 
 .steps {
@@ -394,7 +359,6 @@ section {
   color: #000;
   font-weight: 700;
   margin-bottom: 16px;
-  font-size: 16px;
 }
 
 .routes {
@@ -444,7 +408,6 @@ section {
   color: #cbd5e1;
   font-size: 17px;
   margin-bottom: 28px;
-  font-weight: 300;
 }
 
 .footer {
@@ -481,11 +444,11 @@ section {
 
 /* Mobil ve Tablet Uyumluluğu */
 @media(max-width:1180px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 60px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 50px; }
   h1 { font-size: 38px; }
+  .hero { align-items: center; padding-top: 120px; }
   .vehicle-stage-spread { height: auto; display: flex; flex-direction: column; align-items: center; gap: 25px; }
   .car-card { position: relative; left: auto !important; top: auto !important; transform: none !important; width: 100%; max-width: 360px; height: auto; box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
-  .car-card:hover { transform: translateY(-5px); }
   .trust-grid { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .routes { grid-template-columns: 1fr; }
@@ -562,7 +525,7 @@ section {
         
         <div class="car-card c3">
           <div class="car-image-wrapper">
-            <img src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Economic Class">
+            <img src="https://images.pexels.com/photos/18411206/pexels-photo-18411206.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Economic Class - Fiat Egea">
           </div>
           <div class="car-title">Economic Class</div>
           <div class="car-text">A reliable, highly cost-effective compact sedan choice for budget-conscious solo travelers or couples.</div>
