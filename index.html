@@ -49,7 +49,7 @@ body {
 }
 
 .nav-inner {
-  max-width: 1240px; /* Geniş ekranlarda daha ferah bir düzen */
+  max-width: 1320px; /* Geniş ekranlar için maksimum ferahlık */
   margin: auto;
   padding: 0 22px;
   display: flex;
@@ -87,7 +87,7 @@ body {
 /* Hero Alanı */
 .hero {
   min-height: 100vh;
-  padding-top: 140px;
+  padding-top: 150px;
   padding-bottom: 100px;
   background: linear-gradient(rgba(11, 19, 32, 0.85), rgba(15, 23, 42, 0.96)),
               url("https://images.pexels.com/photos/19315507/pexels-photo-19315507.jpeg?auto=compress&cs=tinysrgb&w=1600");
@@ -111,18 +111,18 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1240px; /* Büyük kartlar için container genişletildi */
+  max-width: 1320px; /* Genişletilmiş ana konteyner */
   margin: auto;
   padding: 0 22px;
   position: relative;
   z-index: 2;
 }
 
-/* Sol Yazılar, Sağ Kartlar Düzeni (Oranlar kartları büyütecek şekilde optimize edildi) */
+/* MAKSİMUM GENİŞLİĞE ULAŞTIRILMIŞ HERO GRID YAPISI */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 50px;
+  grid-template-columns: 0.8fr 1.4fr; /* Sol taraf daraltıldı, sağdaki dev sahneye maksimum alan ayrıldı */
+  gap: 60px;
   align-items: center;
 }
 
@@ -156,7 +156,6 @@ h1 {
   font-size: 17px;
   color: #cbd5e1;
   margin-bottom: 24px;
-  max-width: 650px;
   font-weight: 300;
 }
 
@@ -202,7 +201,6 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px 20px;
-  max-width: 650px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
 }
@@ -221,19 +219,19 @@ h1 {
   font-weight: 700;
 }
 
-/* BÜYÜTÜLEN SAĞ KART SAHNESİ */
+/* MAKSİMUM YAYILIM ALANINA SAHİP SAĞ SAHNE */
 .vehicle-stage-spread {
   position: relative;
-  height: 580px; /* Dev kartlar için dikey alan genişletildi */
+  height: 560px;
   width: 100%;
 }
 
-/* Ultra Lüks ve Genişletilmiş Premium Kartlar */
+/* Devasa Premium Kartlar */
 .car-card {
   position: absolute;
-  width: 340px; /* Kart genişliği 290'dan 340'a çıkarıldı (DEV BOYUT) */
-  height: 440px; /* Kart dikey boyutu sabitlendi ve uzatıldı */
-  background: rgba(15, 23, 42, 0.65); /* Daha koyu ve keskin arka plan kontrastı */
+  width: 340px; 
+  height: 450px; 
+  background: rgba(15, 23, 42, 0.65); 
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 26px;
   padding: 24px;
@@ -245,23 +243,23 @@ h1 {
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), z-index 0.3s, border-color 0.3s, background 0.3s;
 }
 
-/* Dev Kartlar İçin İskambil Destesi Dağılım Konumları (Çakışma oranları düzeltildi) */
+/* Genişleyen Grid Alanına Göre Kusursuz Yelpaze Düzeni */
 .car-card.c1 {
-  left: -40px;
-  top: 70px;
+  left: 0px; /* Tam sol sınırdan başlar */
+  top: 75px;
   z-index: 1;
   transform: rotate(-10deg);
 }
 
 .car-card.c2 {
-  left: 90px;
+  left: 170px; /* Geniş boşluklarla dağıtıldı */
   top: 35px;
   z-index: 2;
   transform: rotate(-3deg);
 }
 
 .car-card.c3 {
-  left: 220px;
+  left: 340px; /* Birbirlerini kapatmayacak şekilde sağa açıldı */
   top: 15px;
   z-index: 3;
   transform: rotate(6deg);
@@ -278,7 +276,7 @@ h1 {
 
 .car-image-wrapper {
   width: 100%;
-  height: 180px; /* Fotoğraf alanı büyütüldü */
+  height: 185px; 
   border-radius: 16px;
   overflow: hidden;
 }
@@ -297,7 +295,7 @@ h1 {
 }
 
 .car-text {
-  color: #e2e8f0; /* Ultra net, yüksek görünürlüklü açık gri tonu */
+  color: #e2e8f0; 
   font-size: 14.5px;
   margin-top: 10px;
   font-weight: 400;
@@ -309,7 +307,7 @@ h1 {
   height: 3.5px;
   background: var(--gold);
   border-radius: 10px;
-  margin-top: auto; /* Çizgiyi kartın en altına otomatik yaslar (Simetri sağlar) */
+  margin-top: auto; 
 }
 
 /* Diğer Alt Bölümler */
@@ -482,7 +480,7 @@ section {
 }
 
 /* Mobil ve Tablet Uyumluluğu */
-@media(max-width:1100px) {
+@media(max-width:1180px) {
   .hero-grid { grid-template-columns: 1fr; gap: 60px; }
   h1 { font-size: 38px; }
   .vehicle-stage-spread { height: auto; display: flex; flex-direction: column; align-items: center; gap: 25px; }
