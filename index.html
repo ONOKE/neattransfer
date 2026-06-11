@@ -224,83 +224,88 @@ h1 {
 /* Görseldeki Gibi Dağıtılan Sağ Sahne */
 .vehicle-stage-spread {
   position: relative;
-  height: 480px;
+  height: 520px;
   width: 100%;
 }
 
-/* Temizlenmiş, Sadece Görsel Odaklı Elit Kartlar */
-.car-card-clean {
+/* Geri Getirilen ve Optimize Edilen Araç Kartları */
+.car-card {
   position: absolute;
-  width: 240px;
-  background: rgba(255, 255, 255, 0.06);
+  width: 250px;
+  background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 12px;
+  border-radius: 24px;
+  padding: 16px;
   box-shadow: -15px 20px 45px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), z-index 0.3s, border-color 0.3s;
 }
 
-/* Görseldeki Dağılım Açıları ve Konumları */
-.car-card-clean.c1 {
+/* İskambil Destesi Dağılım Açıları */
+.car-card.c1 {
   left: 0px;
-  top: 60px;
+  top: 50px;
   z-index: 1;
   transform: rotate(-10deg);
 }
 
-.car-card-clean.c2 {
+.car-card.c2 {
   left: 110px;
-  top: 30px;
+  top: 25px;
   z-index: 2;
   transform: rotate(-3deg);
 }
 
-.car-card-clean.c3 {
+.car-card.c3 {
   left: 220px;
-  top: 15px;
+  top: 10px;
   z-index: 3;
   transform: rotate(6deg);
 }
 
-/* Hover'da kartların şık bir şekilde öne çıkması */
-.car-card-clean:hover {
+/* Hover Efektleri */
+.car-card:hover {
   z-index: 10;
-  transform: scale(1.08) translateY(-20px) rotate(0deg);
+  transform: scale(1.06) translateY(-15px) rotate(0deg);
   border-color: var(--gold);
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
-.car-image-wrapper-clean {
+.car-image-wrapper {
   width: 100%;
-  height: 320px; /* Kart boyunca dik duran asil görünüm */
+  height: 140px;
   border-radius: 14px;
   overflow: hidden;
-  position: relative;
 }
 
-.car-image-wrapper-clean img {
+.car-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Kartın altındaki küçük şık etiket */
-.car-label {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  background: rgba(11, 19, 32, 0.75);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 10px;
-  font-size: 14px;
+.car-title {
+  font-size: 19px;
   font-weight: 700;
-  text-align: center;
-  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  margin-top: 14px;
+}
+
+.car-text {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 6px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.gold-line {
+  width: 40px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 10px;
+  margin-top: 12px;
 }
 
 /* Diğer Alt Bölümler */
@@ -477,9 +482,8 @@ section {
   .hero-grid { grid-template-columns: 1fr; gap: 50px; }
   h1 { font-size: 38px; }
   .vehicle-stage-spread { height: auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-  .car-card-clean { position: relative; left: auto !important; top: auto !important; transform: none !important; width: 100%; max-width: 340px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
-  .car-card-clean:hover { transform: translateY(-5px); }
-  .car-image-wrapper-clean { height: 220px; }
+  .car-card { position: relative; left: auto !important; top: auto !important; transform: none !important; width: 100%; max-width: 340px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
+  .car-card:hover { transform: translateY(-5px); }
   .trust-grid { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .routes { grid-template-columns: 1fr; }
@@ -536,25 +540,31 @@ section {
       </div>
 
       <div class="vehicle-stage-spread">
-        <div class="car-card-clean c1">
-          <div class="car-image-wrapper-clean">
+        <div class="car-card c1">
+          <div class="car-image-wrapper">
             <img src="https://images.pexels.com/photos/17233277/pexels-photo-17233277.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Executive Sedan">
-            <div class="car-label">Executive Sedan</div>
           </div>
+          <div class="car-title">Executive Sedan</div>
+          <div class="car-text">Elegant, high-comfort premium sedan transportation for business trips.</div>
+          <div class="gold-line"></div>
         </div>
 
-        <div class="car-card-clean c2">
-          <div class="car-image-wrapper-clean">
+        <div class="car-card c2">
+          <div class="car-image-wrapper">
             <img src="https://images.pexels.com/photos/17455625/pexels-photo-17455625.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="VIP Vito">
-            <div class="car-label">VIP Vito</div>
           </div>
+          <div class="car-title">VIP Vito</div>
+          <div class="car-text">Spacious luxury van tailored for families and group airport welcomes.</div>
+          <div class="gold-line"></div>
         </div>
         
-        <div class="car-card-clean c3">
-          <div class="car-image-wrapper-clean">
+        <div class="car-card c3">
+          <div class="car-image-wrapper">
             <img src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Economic Class">
-            <div class="car-label">Economic Class</div>
           </div>
+          <div class="car-title">Economic Class</div>
+          <div class="car-text">A reliable sedan choice for budget-conscious couples or solo travelers.</div>
+          <div class="gold-line"></div>
         </div>
       </div>
 
