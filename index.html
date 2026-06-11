@@ -1,384 +1,486 @@
-:::writing{variant="document" id="48291"}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Neat Transfer | Istanbul Airport VIP Transfer</title>
-<meta name="description" content="Premium airport and private transfer service in Istanbul. Executive Sedan, VIP Vito and Minibus options. Get a fast quote on WhatsApp.">
+<title>Neat Transfer | Istanbul Airport VIP Transfer & Chauffeur Services</title>
+<meta name="description" content="Premium VIP transfer service for Istanbul Airport, Sabiha Gokcen, and intercity travel. Executive Sedan, VIP Vito, and Minibus options. Get a fast quote via WhatsApp.">
+
+<!-- Elit ve Gözü Yormayan Modern Yazı Tipi -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --dark:#07111f;
-  --gold:#d6a94f;
-  --green:#25D366;
-  --light:#f6f7fb;
-  --text:#172033;
-  --muted:#64748b;
+:root {
+  --dark: #0b1320;
+  --dark-card: rgba(15, 23, 42, 0.6);
+  --gold: #dfb257;
+  --gold-hover: #f1c973;
+  --green: #25D366;
+  --light: #f8fafc;
+  --text: #0f172a;
+  --muted: #64748b;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--text);
-  background:var(--light);
-  line-height:1.6;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.hero{
-  min-height:100vh;
-  background:
-    linear-gradient(rgba(7,17,31,.78),rgba(7,17,31,.86)),
-    url("https://images.pexels.com/photos/19315507/pexels-photo-19315507.jpeg?auto=compress&cs=tinysrgb&w=1600");
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  color:white;
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--light);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
-    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px);
-  background-size:70px 70px;
-  opacity:.2;
+/* Navigasyon Yenilendi - Karışıklık Engellendi */
+.nav {
+  background: rgba(11, 19, 32, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 0;
 }
 
-.container{
-  width:100%;
-  max-width:1180px;
-  margin:auto;
-  padding:36px 22px;
-  position:relative;
-  z-index:2;
+.nav-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav{
-  position:absolute;
-  top:24px;
-  left:0;
-  right:0;
-  z-index:5;
+.logo {
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 22px;
+  color: #fff;
 }
 
-.nav-inner{
-  max-width:1180px;
-  margin:auto;
-  padding:0 22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.logo span {
+  color: var(--gold);
 }
 
-.logo{
-  font-weight:900;
-  letter-spacing:2px;
-  font-size:22px;
-  color:white;
+.nav-phone {
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
-.nav-phone{
-  color:white;
-  text-decoration:none;
-  border:1px solid rgba(255,255,255,.25);
-  padding:10px 16px;
-  border-radius:999px;
-  font-size:14px;
+.nav-phone:hover {
+  background: #fff;
+  color: var(--dark);
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:42px;
-  align-items:center;
+/* Hero Alanı Arka Planı Yumuşatıldı */
+.hero {
+  min-height: 100vh;
+  padding-top: 140px; /* Navigasyon için üst boşluk */
+  padding-bottom: 60px;
+  background: linear-gradient(rgba(11, 19, 32, 0.82), rgba(15, 23, 42, 0.9)),
+              url("https://images.pexels.com/photos/19315507/pexels-photo-19315507.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.badge{
-  display:inline-block;
-  color:#ffe7a4;
-  background:rgba(214,169,79,.12);
-  border:1px solid rgba(214,169,79,.35);
-  padding:8px 14px;
-  border-radius:999px;
-  margin-bottom:18px;
-  font-size:14px;
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px),
+              linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: .3;
+  pointer-events: none;
 }
 
-h1{
-  font-size:58px;
-  line-height:1.05;
-  margin-bottom:20px;
-  letter-spacing:-1px;
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 22px;
+  position: relative;
+  z-index: 2;
 }
 
-.hero p{
-  font-size:21px;
-  color:#d7e0ee;
-  margin-bottom:28px;
-  max-width:650px;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
 }
 
-.cta-row{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  align-items:center;
+.badge {
+  display: inline-block;
+  color: var(--gold);
+  background: rgba(223, 178, 87, 0.1);
+  border: 1px solid rgba(223, 178, 87, 0.3);
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.btn{
-  display:inline-block;
-  text-decoration:none;
-  font-weight:800;
-  border-radius:14px;
-  padding:17px 26px;
-  font-size:18px;
+h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  color: #ffffff;
+  letter-spacing: -1px;
 }
 
-.btn-whatsapp{
-  background:var(--green);
-  color:white;
-  box-shadow:0 14px 30px rgba(37,211,102,.25);
+.hero p {
+  font-size: 19px;
+  color: #cbd5e1;
+  margin-bottom: 36px;
+  max-width: 600px;
+  font-weight: 300;
 }
 
-.btn-secondary{
-  color:white;
-  border:1px solid rgba(255,255,255,.25);
+.cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.trust{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-  margin-top:28px;
-  color:#cbd5e1;
-  font-size:15px;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 16px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
-.vehicle-stage{
-  position:relative;
-  min-height:420px;
+.btn:hover {
+  transform: translateY(-2px);
 }
 
-.car-card{
-  position:absolute;
-  width:300px;
-  border-radius:26px;
-  padding:20px;
-  overflow:hidden;
-  background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
-  border:1px solid rgba(255,255,255,.18);
-  box-shadow:0 30px 80px rgba(0,0,0,.35);
-  backdrop-filter:blur(12px);
+.btn-whatsapp {
+  background: var(--green);
+  color: white;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
 }
 
-.car-card.left{
-  left:0;
-  top:40px;
-  transform:rotate(-5deg);
+.btn-secondary {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
 }
 
-.car-card.right{
-  right:0;
-  bottom:28px;
-  transform:rotate(5deg);
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.car-card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:14px;
-  margin-bottom:15px;
+.trust {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  color: #94a3b8;
+  font-size: 14px;
 }
 
-.car-title{
-  font-size:24px;
-  font-weight:900;
-  color:white;
+.trust div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.car-text{
-  color:#cbd5e1;
-  margin-top:8px;
+.trust span {
+  color: var(--gold);
+  font-weight: bold;
 }
 
-.gold-line{
-  width:70px;
-  height:4px;
-  background:var(--gold);
-  border-radius:10px;
-  margin-top:18px;
+/* Araç Sahnesi ve Premium Kartlar */
+.vehicle-stage {
+  position: relative;
+  min-height: 460px;
 }
 
-section{
-  padding:70px 22px;
+.car-card {
+  position: absolute;
+  width: 310px;
+  border-radius: 24px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+  backdrop-filter: blur(16px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.section-inner{
-  max-width:1180px;
-  margin:auto;
+.car-card.left {
+  left: -10px;
+  top: 10px;
+  transform: rotate(-4deg);
 }
 
-.section-title{
-  text-align:center;
-  font-size:36px;
-  margin-bottom:12px;
-  color:#0f172a;
+.car-card.right {
+  right: -10px;
+  bottom: 10px;
+  transform: rotate(4deg);
 }
 
-.section-sub{
-  text-align:center;
-  color:var(--muted);
-  max-width:720px;
-  margin:0 auto 38px;
-  font-size:18px;
+.car-card:hover {
+  z-index: 10;
+  transform: scale(1.05) rotate(0deg);
+  border-color: var(--gold);
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+.car-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin-top: 12px;
 }
 
-.card{
-  background:white;
-  padding:28px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(15,23,42,.08);
-  border:1px solid #e5e7eb;
+.car-text {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-top: 6px;
+  font-weight: 300;
 }
 
-.card h3{
-  font-size:22px;
-  margin-bottom:10px;
+.gold-line {
+  width: 50px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 10px;
+  margin-top: 14px;
 }
 
-.card p{
-  color:var(--muted);
+/* Bölümler genel ayarlar */
+section {
+  padding: 90px 22px;
 }
 
-.steps{
-  background:#0f172a;
-  color:white;
+.section-inner {
+  max-width: 1180px;
+  margin: auto;
 }
 
-.steps .section-title{color:white}
-.steps .section-sub{color:#cbd5e1}
-
-.step-num{
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--gold);
-  color:#111827;
-  font-weight:900;
-  margin-bottom:16px;
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--dark);
+  letter-spacing: -0.5px;
 }
 
-.routes{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 50px;
+  font-size: 17px;
+  font-weight: 400;
 }
 
-.route{
-  background:white;
-  border-radius:16px;
-  padding:18px 20px;
-  box-shadow:0 8px 24px rgba(15,23,42,.06);
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
+/* Kart Tasarımları */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.route span{
-  color:var(--muted);
+.card {
+  background: white;
+  padding: 36px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(15,23,42,0.04);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.cta-section{
-  background:linear-gradient(135deg,#07111f,#12223a);
-  color:white;
-  text-align:center;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(15,23,42,0.08);
 }
 
-.cta-section h2{
-  font-size:40px;
-  margin-bottom:14px;
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--dark);
 }
 
-.cta-section p{
-  color:#cbd5e1;
-  font-size:19px;
-  margin-bottom:24px;
+.card p {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 300;
 }
 
-.footer{
-  background:#020617;
-  color:#94a3b8;
-  padding:30px 22px;
-  text-align:center;
-  font-size:14px;
+/* Nasıl Çalışır Alanı */
+.steps {
+  background: #090f1c;
+  color: white;
 }
 
-.floating-wa{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:var(--green);
-  color:white;
-  text-decoration:none;
-  width:62px;
-  height:62px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  box-shadow:0 12px 30px rgba(0,0,0,.28);
-  z-index:20;
+.steps .section-title { color: white; }
+.steps .section-sub { color: #94a3b8; }
+.steps .card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.steps .card h3 { color: white; }
+.steps .card p { color: #94a3b8; }
+
+.step-num {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold);
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr}
-  h1{font-size:42px}
-  .hero{min-height:auto;padding-top:100px}
-  .vehicle-stage{min-height:330px}
-  .car-card{width:240px}
-  .cards{grid-template-columns:1fr}
-  .routes{grid-template-columns:1fr}
+/* Rotalar */
+.routes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-@media(max-width:560px){
-  h1{font-size:34px}
-  .hero p{font-size:18px}
-  .btn{width:100%;text-align:center}
-  .nav-phone{display:none}
-  .car-card{
-    position:relative;
-    width:100%;
-    transform:none!important;
-    margin-bottom:16px;
-  }
-  .vehicle-stage{min-height:auto}
+.route {
+  background: white;
+  border-radius: 16px;
+  padding: 22px 26px;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.03);
+  border: 1px solid #edf2f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.route strong {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.route span {
+  color: var(--gold);
+  font-weight: 500;
+  background: rgba(223, 178, 87, 0.08);
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Alt CTA Alanı */
+.cta-section {
+  background: linear-gradient(135deg, #07111f, #13253e);
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.cta-section h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  color: #cbd5e1;
+  font-size: 18px;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.footer {
+  background: #040810;
+  color: #64748b;
+  padding: 40px 22px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* WhatsApp Butonu */
+.floating-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+  z-index: 200;
+  transition: transform 0.2s;
+}
+
+.floating-wa:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Uyumluluk */
+@media(max-width:960px){
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  h1 { font-size: 42px; }
+  .hero { padding-top: 120px; }
+  .vehicle-stage { min-height: 400px; display: flex; justify-content: center; gap: 20px; }
+  .car-card { position: relative; left: auto !important; right: auto !important; top: auto !important; bottom: auto !important; transform: none !important; }
+  .cards { grid-template-columns: 1fr; }
+  .routes { grid-template-columns: 1fr; }
+}
+
+@media(max-width:640px){
+  h1 { font-size: 34px; }
+  .hero p { font-size: 17px; }
+  .cta-row .btn { width: 100%; }
+  .nav-phone { display: none; }
+  .vehicle-stage { flex-direction: column; align-items: center; min-height: auto; }
+  .car-card { width: 100%; max-width: 340px; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- Geliştirilmiş Menü Barı -->
 <div class="nav">
   <div class="nav-inner">
-    <div class="logo">NEAT TRANSFER</div>
+    <div class="logo">NEAT <span>TRANSFER</span></div>
     <a class="nav-phone" href="https://wa.me/905376986489" target="_blank">Contact on WhatsApp</a>
   </div>
 </div>
@@ -387,35 +489,37 @@ section{
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="badge">Istanbul Airport • Sabiha Gokcen Airport • Private Transfers</div>
-        <h1>Premium Airport & Private Transfer Service in Istanbul</h1>
-        <p>Reliable airport and private transfer services with Executive Sedan, VIP Vito and Minibus options available 24/7.</p>
-
+        <div class="badge">Istanbul Airport • Sabiha Gokcen • 24/7 VIP Chauffeur</div>
+        <h1>Premium Airport & Private Transfer Services</h1>
+        <p>Experience seamless, luxury transportation across Istanbul. Exclusive Sedan, VIP Vito, and Minibus fleets tailored for your comfort.</p>
+        
         <div class="cta-row">
-          <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">Get a Quote on WhatsApp</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">Book Now via WhatsApp</a>
           <a class="btn btn-secondary" href="#services">Explore Services</a>
         </div>
-
+        
         <div class="trust">
-          <div>✓ 24/7 support</div>
-          <div>✓ Professional drivers</div>
-          <div>✓ Clean and comfortable vehicles</div>
-          <div>✓ Fast booking assistance</div>
+          <div><span>✓</span> 24/7 Live Support</div>
+          <div><span>✓</span> Professional Drivers</div>
+          <div><span>✓</span> Pristine & Safe Vehicles</div>
+          <div><span>✓</span> Instant Booking</div>
         </div>
       </div>
 
       <div class="vehicle-stage">
+        <!-- Executive Sedan -->
         <div class="car-card left">
-          <img src="https://images.pexels.com/photos/17233277/pexels-photo-17233277.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Executive Sedan transfer vehicle">
+          <img src="https://images.pexels.com/photos/17233277/pexels-photo-17233277.jpeg?auto=compress&cs=tinysrgb&w=1200" style="width:100%; height:170px; object-fit:cover; border-radius:14px;" alt="Executive Sedan">
           <div class="car-title">Executive Sedan</div>
-          <div class="car-text">Comfortable and stylish transportation for airport, hotel and business travel.</div>
+          <div class="car-text">Elegant and highly comfortable choice for solo travelers, business trips, and couples.</div>
           <div class="gold-line"></div>
         </div>
-
+        
+        <!-- VIP Vito -->
         <div class="car-card right">
-          <img src="https://images.pexels.com/photos/17455625/pexels-photo-17455625.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="VIP Vito transfer vehicle">
+          <img src="https://images.pexels.com/photos/17455625/pexels-photo-17455625.jpeg?auto=compress&cs=tinysrgb&w=1200" style="width:100%; height:170px; object-fit:cover; border-radius:14px;" alt="VIP Vito">
           <div class="car-title">VIP Vito</div>
-          <div class="car-text">Premium transfer option for families, business travelers and private airport pickups.</div>
+          <div class="car-text">Spacious luxury tailored for families, business groups, and premium airport welcomes.</div>
           <div class="gold-line"></div>
         </div>
       </div>
@@ -425,21 +529,21 @@ section{
 
 <section id="services">
   <div class="section-inner">
-    <h2 class="section-title">Transfer Services</h2>
-    <p class="section-sub">Choose the right vehicle for your route and receive a fast quote on WhatsApp.</p>
+    <h2 class="section-title">Our Premium Services</h2>
+    <p class="section-sub">We offer tailored chauffeured solutions matching your route, timing, and luxury standards.</p>
 
     <div class="cards">
       <div class="card">
-        <h3>Airport Transfer</h3>
-        <p>Reliable pickup and drop-off service for Istanbul Airport and Sabiha Gokcen Airport.</p>
+        <h3>Airport Transfers</h3>
+        <p>Punctual greet-and-meet services at Istanbul Airport and Sabiha Gokcen Airport. Stress-free ride straight to your hotel.</p>
       </div>
       <div class="card">
-        <h3>VIP Transfer</h3>
-        <p>Comfortable VIP Vito vehicles for premium, private and business travel needs.</p>
+        <h3>VIP Chauffeur Service</h3>
+        <p>Premium Mercedes-Benz Vito vehicles equipped with high-end amenities for ultimate privacy and comfort.</p>
       </div>
       <div class="card">
-        <h3>Intercity Transfer</h3>
-        <p>Private transfer options from Istanbul to nearby cities and popular destinations.</p>
+        <h3>Intercity Travel</h3>
+        <p>Comfortable long-distance transfers from Istanbul to any neighboring city or holiday destination with absolute safety.</p>
       </div>
     </div>
   </div>
@@ -448,23 +552,23 @@ section{
 <section class="steps">
   <div class="section-inner">
     <h2 class="section-title">How It Works</h2>
-    <p class="section-sub">Send us your transfer details on WhatsApp and our team will prepare your quote quickly.</p>
+    <p class="section-sub">Get your private driver confirmed in 3 simple steps through quick messaging.</p>
 
     <div class="cards">
       <div class="card">
         <div class="step-num">1</div>
-        <h3>Send a WhatsApp Message</h3>
-        <p>Share your pickup and drop-off locations.</p>
+        <h3>Send a Message</h3>
+        <p>Contact us on WhatsApp with your pickup location and destination details.</p>
       </div>
       <div class="card">
         <div class="step-num">2</div>
-        <h3>Complete Trip Details</h3>
-        <p>Send your date, time, passenger count and preferred vehicle.</p>
+        <h3>Share Details</h3>
+        <p>Provide your preferred date, time, passenger count, and vehicle choice.</p>
       </div>
       <div class="card">
         <div class="step-num">3</div>
-        <h3>Receive Your Quote</h3>
-        <p>Our team will contact you shortly with the best available offer.</p>
+        <h3>Get Instant Quote</h3>
+        <p>Our dedicated operations team will instantly send your all-inclusive fixed price.</p>
       </div>
     </div>
   </div>
@@ -473,38 +577,35 @@ section{
 <section>
   <div class="section-inner">
     <h2 class="section-title">Popular Routes</h2>
-    <p class="section-sub">Frequently requested airport and private transfer routes.</p>
+    <p class="section-sub">Our most frequently requested luxury travel connections.</p>
 
     <div class="routes">
       <div class="route"><strong>Istanbul Airport</strong><span>→ Kadikoy</span></div>
-      <div class="route"><strong>Sabiha Gokcen Airport</strong><span>→ Istanbul Airport</span></div>
-      <div class="route"><strong>Istanbul Airport</strong><span>→ Taksim</span></div>
-      <div class="route"><strong>Sabiha Gokcen Airport</strong><span>→ Bursa</span></div>
-      <div class="route"><strong>Istanbul</strong><span>→ Bolu / Ankara</span></div>
+      <div class="route"><strong>Sabiha Gokcen</strong><span>→ Istanbul Airport</span></div>
+      <div class="route"><strong>Istanbul Airport</strong><span>→ Taksim / Sultanahmet</span></div>
+      <div class="route"><strong>Sabiha Gokcen</strong><span>→ Bursa</span></div>
       <div class="route"><strong>Istanbul</strong><span>→ Sapanca / Kocaeli</span></div>
+      <div class="route"><strong>Istanbul</strong><span>→ Bolu / Ankara</span></div>
     </div>
   </div>
 </section>
 
 <section class="cta-section">
   <div class="section-inner">
-    <h2>Need a private transfer quote?</h2>
-    <p>Message us on WhatsApp and our team will assist you with your transfer request.</p>
-    <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">Message Us on WhatsApp</a>
+    <h2>Ready to Book Your VIP Ride?</h2>
+    <p>Get a fast, transparent quote via WhatsApp. Our team is available 24 hours a day.</p>
+    <a class="btn btn-whatsapp" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">Chat with Us on WhatsApp</a>
   </div>
 </section>
 
 <footer class="footer">
-  © 2026 Neat Transfer. All rights reserved.
+  &copy; 2026 Neat Transfer. All rights reserved.
 </footer>
 
-<a class="floating-wa" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">☏</a>
+<!-- İkon olarak modernize edilmiş WhatsApp butonu -->
+<a class="floating-wa" href="https://wa.me/905376986489?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20airport%20transfer." target="_blank">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.244 8.477 3.513 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.479 5.362 1.48 5.417 0 9.823-4.38 9.826-9.761.002-2.605-1.002-5.054-2.829-6.882-1.826-1.827-4.255-2.833-6.86-2.833-5.42 0-9.825 4.382-9.829 9.763-.001 2.125.549 3.69 1.564 5.327l-.982 3.585 3.748-.979zm11.233-5.183c-.3-.15-1.773-.875-2.048-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.414-1.492-.893-.797-1.496-1.782-1.671-2.083-.175-.3-.019-.463.13-.612.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.233-.244-.587-.492-.507-.676-.516-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8 1.375-.275 1.3-1.05 2.555-.175 3.712.875 1.158 2.197 1.83 3.473 2.29.3.108.575.143.795.112.247-.035.775-.317.884-.625.11-.308.11-.575.077-.625-.034-.05-.134-.075-.434-.225z"/></svg>
+</a>
 
 </body>
 </html>
-:::
-
-Bunu komple yapıştırınca Türkçe kalmaz. Commit sonrası sayfayı şu şekilde aç:
-
-```text
-https://neattransfer.com/?v=en1
